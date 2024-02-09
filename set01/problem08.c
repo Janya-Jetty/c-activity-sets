@@ -2,16 +2,6 @@
 
 #include <stdio.h>
 
-int main()
- {
-    int n = input_array_size();
-    int a[n];
-    input_array(n, a);
-    int sum = sum_n_array(n, a);
-    output(n, a, sum);
-    return 0;
-}
-
 int input_array_size() 
 {
     int n;
@@ -51,4 +41,14 @@ void output(int n, int a[n], int sum)
         }
     }
     printf(" is %d\n", sum);
+}
+
+int main()
+ {
+    int n = input_array_size();
+    int a[n];
+    input_array(n, a);
+    int sum = sum_n_array(n, a);
+    output(n, a, sum);
+    return 0;
 }
