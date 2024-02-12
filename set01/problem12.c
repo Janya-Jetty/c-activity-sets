@@ -8,18 +8,6 @@ typedef struct
     float imaginary;
 } Complex;
 
-int main() 
-{
-    int n;
-    Complex result;
-    n = get_n();
-    Complex c[n];
-    input_n_complex(n, c);
-    result = add_n_complex(n, c);
-    output(n, c, result);
-    return 0;
-}
-
 int get_n()
 {
     int n;
@@ -74,4 +62,16 @@ void output(int n, Complex c[n], Complex result)
         }
     }
     printf(" is (%.2f + %.2fi)\n", result.real, result.imaginary);
+}
+
+int main() 
+{
+    int n;
+    Complex result;
+    n = get_n();
+    Complex c[n];
+    input_n_complex(n, c);
+    result = add_n_complex(n, c);
+    output(n, c, result);
+    return 0;
 }

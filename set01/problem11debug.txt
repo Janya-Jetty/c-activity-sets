@@ -1,0 +1,50 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\Desktop\PSC\c-activity-sets\set01\problem11.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x4014ae: file problem11.c, line 37.
+(gdb) r
+Starting program: C:\Users\hp\Desktop\PSC\c-activity-sets\set01/./problem11.exe 
+[New Thread 5104.0x7a0]
+[New Thread 5104.0xf74]
+
+Breakpoint 1, main () at problem11.c:37
+37          a = input_complex();
+(gdb) n
+Enter the real and imaginary parts of a complex number: 6
+6
+38          b = input_complex();
+(gdb) n
+Enter the real and imaginary parts of a complex number: 5
+5
+39          sum = add_complex(a, b);
+(gdb) s
+add_complex (a=..., b=...) at problem11.c:23
+23          sum.real = a.real + b.real;
+(gdb) s
+24          sum.imaginary = a.imaginary + b.imaginary;
+(gdb) s
+25          return sum;
+(gdb) s
+26      }
+(gdb) s
+main () at problem11.c:40
+40          output(a, b, sum);
+(gdb) n
+The sum of (6.00 + 6.00i) and (5.00 + 5.00i) is (11.00 + 11.00i)
+41          return 0;
+(gdb) n
+42      }(gdb) n
+0x004010fd in __mingw_CRTStartup ()
+(gdb) n
+Single stepping until exit from function __mingw_CRTStartup,
+which has no line number information.
+[Inferior 1 (process 5104) exited normally]
+(gdb) q
