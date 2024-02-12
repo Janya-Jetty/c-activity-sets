@@ -9,16 +9,6 @@ typedef struct
 } 
 Complex;
 
-int main() 
-{
-    Complex a, b, sum;
-    a = input_complex();
-    b = input_complex();
-    sum = add_complex(a, b);
-    output(a, b, sum);
-    return 0;
-}
-
 Complex input_complex() 
 {
     Complex c;
@@ -39,4 +29,14 @@ void output(Complex a, Complex b, Complex sum)
 {
     printf("The sum of (%.2f + %.2fi) and (%.2f + %.2fi) is (%.2f + %.2fi)\n",
            a.real, a.imaginary, b.real, b.imaginary, sum.real, sum.imaginary);
+}
+
+int main() 
+{
+    Complex a, b, sum;
+    a = input_complex();
+    b = input_complex();
+    sum = add_complex(a, b);
+    output(a, b, sum);
+    return 0;
 }

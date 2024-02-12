@@ -1,0 +1,32 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\Desktop\PSC\c-activity-sets\set01\problem10.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40152d: file problem10.c, line 56.
+(gdb) r
+Starting program: C:\Users\hp\Desktop\PSC\c-activity-sets\set01/./problem10.exe 
+[New Thread 9708.0x2b78]
+[New Thread 9708.0x1408]
+
+Breakpoint 1, main () at problem10.c:56
+56          input_two_strings(string1,string2);
+(gdb) n
+enter the first string :4
+enter the second string :6
+57          result=stringcompare(string1,string2);
+(gdb) n
+58          output(string1,string2,result);
+(gdb) n
+6 is the greatest is 59     return 0;
+(gdb) n
+60       }
+(gdb) n
+0x004010fd in __mingw_CRTStartup ()
+(gdb) q
