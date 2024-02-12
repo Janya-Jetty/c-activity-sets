@@ -1,0 +1,55 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\Desktop\PSC\c-activity-sets\set01\problem12.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x4015d0: file problem12.c, line 68.
+(gdb) r
+Starting program: C:\Users\hp\Desktop\PSC\c-activity-sets\set01/./problem12.exe 
+[New Thread 10280.0x3ce0]
+[New Thread 10280.0x754]
+
+Breakpoint 1, 0x004015d0 in main () at problem12.c:68
+68      {
+(gdb) n
+71          n = get_n();
+(gdb) n
+Enter the number of complex numbers: 5
+72          Complex c[n];
+(gdb) n
+73          input_n_complex(n, c);
+(gdb) n
+Enter the real and imaginary parts of a complex number: 8
+
+8
+Enter the real and imaginary parts of a complex number: 7
+7
+Enter the real and imaginary parts of a complex number: 5
+5
+Enter the real and imaginary parts of a complex number: 44
+
+4
+Enter the real and imaginary parts of a complex number: 6
+6
+74          result = add_n_complex(n, c);
+(gdb) 6
+Undefined command: "6".  Try "help".
+(gdb) n
+75          output(n, c, result);
+(gdb) n
+The sum of (8.00 + 8.00i), (7.00 + 7.00i), (5.00 + 5.00i), (44.00 + 4.00i), (6.00 + 6.00i) is (70.00 + 30.00i)
+76          return 0;
+(gdb) n
+77      }(gdb) n
+0x004010fd in __mingw_CRTStartup ()
+(gdb) n
+Single stepping until exit from function __mingw_CRTStartup,
+which has no line number information.
+[Inferior 1 (process 10280) exited normally]
+(gdb) n
