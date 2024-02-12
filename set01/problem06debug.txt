@@ -7,5 +7,5 @@ and "show warranty" for details.
 This GDB was configured as "mingw32".
 For bug reporting instructions, please see:
 <http://www.gnu.org/software/gdb/bugs/>...
-Reading symbols from C:\Users\hp\Desktop\PSC\c-activity-sets\set01\problem05.exe...done.
+Reading symbols from C:\Users\hp\Desktop\PSC\c-activity-sets\set01\problem06.exe...done.
 (gdb)
