@@ -1,0 +1,49 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\Desktop\PSC\c-activity-sets\set02\problem04.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401562: file problem04.c, line 58.
+(gdb) r
+Starting program: C:\Users\hp\Desktop\PSC\c-activity-sets\set02/./problem04.exe 
+[New Thread 2076.0x39e4]
+[New Thread 2076.0x34ec]
+
+Breakpoint 1, 0x00401562 in main () at problem04.c:58
+58      {
+(gdb) n
+59          int n = input_array_size();
+(gdb) n
+Enter the size of the array: 5
+60          int a[n];
+(gdb) 1
+Undefined command: "1".  Try "help".
+(gdb) n
+61          input_array(n,a);
+(gdb) n
+Enter 5 elements:
+Enter element 1: 1 
+Enter element 2: 2
+Enter element 3: 3
+Enter element 4: 4
+Enter element 5: 5
+62          int sum = sum_composite_numbers(n,a);
+(gdb) n
+63          output(sum);
+(gdb) n
+The sum of composite numbers in the array is: 5
+64          return 0;
+(gdb) n
+65      }(gdb) n
+0x004010fd in __mingw_CRTStartup ()
+(gdb) n
+Single stepping until exit from function __mingw_CRTStartup,
+which has no line number information.
+[Inferior 1 (process 2076) exited normally]
+(gdb) q
