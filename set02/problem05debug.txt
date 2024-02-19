@@ -1,0 +1,44 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\Desktop\PSC\c-activity-sets\set02\problem05.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40148b: file problem05.c, line 33.
+(gdb) r
+Starting program: C:\Users\hp\Desktop\PSC\c-activity-sets\set02/./problem05.exe 
+[New Thread 1292.0x1f9c]
+[New Thread 1292.0x3a34]
+
+Breakpoint 1, main () at problem05.c:33
+33          num1 = input();
+(gdb) n
+Enter a number: 4
+34          num2 = input();
+(gdb) n
+Enter a number: 3
+35          gcd = find_gcd(num1, num2);
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) n
+Program not restarted.
+(gdb) n
+36          output(num1, num2, gcd);
+(gdb) n
+GCD of 4 and 3 is 1
+37          return 0;
+(gdb) n
+38      }(gdb) n
+0x004010fd in __mingw_CRTStartup ()
+(gdb) n
+Single stepping until exit from function __mingw_CRTStartup,
+which has no line number information.
+[Inferior 1 (process 1292) exited normally]
+(gdb) n
+The program is not being run.
+(gdb) q
