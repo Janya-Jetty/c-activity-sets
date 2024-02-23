@@ -1,0 +1,44 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\Desktop\PSC\c-activity-sets\set03\problem02.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40140e: file problem02.c, line 12.
+(gdb) r
+Starting program: C:\Users\hp\Desktop\PSC\c-activity-sets\set03/./problem02.exe 
+[New Thread 7816.0x13c4]
+[New Thread 7816.0x37e8]
+
+Breakpoint 1, main () at problem02.c:12
+12          input_triangle(&x1, &y1, &x2, &y2, &x3, &y3);
+(gdb) n
+Enter coordinates of first point (x1 y1): 33
+33
+Enter coordinates of second point (x2 y2): 44
+44
+Enter coordinates of third point (x3 y3): 55
+55
+13          int result = is_triangle(x1, y1, x2, y2, x3, y3);
+(gdb) n
+14          output(x1, y1, x2, y2, x3, y3, result);
+(gdb) n
+Coordinates of first point: (33.00, 33.00)
+Coordinates of second point: (44.00, 44.00)
+Coordinates of third point: (55.00, 55.00)
+These points do not form a triangle.
+15          return 0;
+(gdb) n
+16      }
+(gdb) n
+0x004010fd in __mingw_CRTStartup ()
+(gdb) n
+Single stepping until exit from function __mingw_CRTStartup,
+which has no line number information.
+[Inferior 1 (process 7816) exited normally]
+(gdb) q
