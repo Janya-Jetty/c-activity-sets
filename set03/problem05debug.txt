@@ -1,0 +1,42 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\Desktop\PSC\c-activity-sets\set03\problem05.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401568: file problem05.c, line 50.
+(gdb) r
+Starting program: C:\Users\hp\Desktop\PSC\c-activity-sets\set03/./problem05.exe 
+[New Thread 16316.0x421c]
+[New Thread 16316.0x36fc]
+
+Breakpoint 1, 0x00401568 in main () at problem05.c:50
+50      {
+(gdb) n
+51          int size = input_array_size();
+(gdb) n
+Enter the size of the array: 4
+52          int array[size];
+(gdb) n
+53          init_array(size, array);
+(gdb) n
+54          eratosthenes_sieve(size, array);
+(gdb) n
+55          output(size, array);
+(gdb) n
+Prime numbers up to 4 are:
+2 3 5
+56          return 0;
+(gdb) n
+57      }(gdb) n
+0x004010fd in __mingw_CRTStartup ()
+(gdb) n
+Single stepping until exit from function __mingw_CRTStartup,
+which has no line number information.
+[Inferior 1 (process 16316) exited normally]
+(gdb) q
