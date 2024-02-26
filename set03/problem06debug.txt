@@ -1,0 +1,62 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\Desktop\PSC\c-activity-sets\set03\problem06.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40152b: file problem06.c, line 44.
+(gdb) r
+Starting program: C:\Users\hp\Desktop\PSC\c-activity-sets\set03/./problem06.exe 
+[New Thread 16940.0x11c4]
+[New Thread 16940.0x3de4]
+
+Breakpoint 1, main () at problem06.c:44
+44          input_string(main_string, substring);
+(gdb) n
+Enter the main string: janya
+Enter the substring: jetty
+45          int index = sub_str_index(main_string, substring);
+(gdb) s
+sub_str_index (string=0x60fe98 "janya", substring=0x60fe34 "jetty") at problem06.c:16
+16          int string_length = strlen(string);
+(gdb) n
+17          int substring_length = strlen(substring);
+(gdb) n
+18          for (int i = 0; i <= string_length - substring_length; i++) 
+(gdb) n
+21              for (j = 0; j < substring_length; j++) 
+(gdb) n
+23                  if (string[i + j] != substring[j])
+(gdb) n
+21              for (j = 0; j < substring_length; j++) 
+(gdb) n
+23                  if (string[i + j] != substring[j])
+(gdb) n
+24                      break;
+(gdb) n
+26              if (j == substring_length)
+(gdb) n
+18          for (int i = 0; i <= string_length - substring_length; i++) 
+(gdb) n
+29          return -1; 
+(gdb) n
+30      }
+(gdb) n
+main () at problem06.c:46
+46          output(main_string, substring, index);
+(gdb) n
+The substring 'jetty' is not found in the main string 'janya'.
+47          return 0;
+(gdb) n
+48      }(gdb) n
+0x004010fd in __mingw_CRTStartup ()
+(gdb) n
+Single stepping until exit from function __mingw_CRTStartup,
+which has no line number information.
+[Inferior 1 (process 16940) exited normally]
+(gdb) q
