@@ -1,0 +1,54 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\Desktop\PSC\c-activity-sets\set03\problem07.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401556: file problem07.c, line 53.
+(gdb) r
+Starting program: C:\Users\hp\Desktop\PSC\c-activity-sets\set03/./problem07.exe 
+[New Thread 6340.0x4354]
+[New Thread 6340.0x35c]
+
+Breakpoint 1, main () at problem07.c:53
+53          Line line = input_line();
+(gdb) n
+Enter coordinates for point 1:
+Enter x coordinate: 55
+Enter y coordinate: 45
+Enter coordinates for point 2:
+Enter x coordinate: 55
+Enter y coordinate: 45
+54          find_length(&line);
+(gdb) s
+find_length (l=0x60feec) at problem07.c:39
+39          float dx = l->p1.x - l->p2.x;
+(gdb) n
+40          float dy = l->p1.y - l->p2.y;
+(gdb)
+41          l->distance = sqrt(dx * dx + dy * dy);
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+42      }
+(gdb) n
+main () at problem07.c:55
+55          output(line);
+(gdb) n
+Point 1: (55.00, 45.00)
+Point 2: (55.00, 45.00)
+Distance between the points: 0.00
+56          return 0;
+(gdb) n
+57      }(gdb) n
+0x004010fd in __mingw_CRTStartup ()
+(gdb) n
+Single stepping until exit from function __mingw_CRTStartup,
+which has no line number information.
+[Inferior 1 (process 6340) exited normally]
+(gdb) q
