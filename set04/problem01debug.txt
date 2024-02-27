@@ -1,0 +1,48 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\Desktop\PSC\c-activity-sets\set04\problem01.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x4014d0: file problem01.c, line 28.
+(gdb) r
+Starting program: C:\Users\hp\Desktop\PSC\c-activity-sets\set04/./problem01.exe 
+[New Thread 16088.0x474]
+[New Thread 16088.0x262c]
+
+Breakpoint 1, main () at problem01.c:28
+28          input(&num1, &den1, &num2, &den2);
+(gdb) n
+Enter first fraction (numerator denominator): 45
+55
+Enter second fraction (numerator denominator): 65
+75
+29          add(num1, den1, num2, den2, &res_num, &res_den);
+(gdb) s
+add (num1=45, den1=55, num2=65, den2=75, res_num=0x60fedc, res_den=0x60fed8) at problem01.c:15
+15          *res_num = (num1 * den2) + (num2 * den1);
+(gdb) n
+16          *res_den = den1 * den2;
+(gdb) n
+17      }
+(gdb) nnn
+Undefined command: "nnn".  Try "help".
+(gdb) n
+main () at problem01.c:30
+30          output(num1, den1, num2, den2, res_num, res_den);
+(gdb) n
+The sum of 45/55 and 65/75 is 6950/4125
+31          return 0;
+(gdb) n
+32      }(gdb) n
+0x004010fd in __mingw_CRTStartup ()
+(gdb) n
+Single stepping until exit from function __mingw_CRTStartup,
+which has no line number information.
+[Inferior 1 (process 16088) exited normally]
+(gdb) q
