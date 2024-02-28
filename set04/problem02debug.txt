@@ -1,0 +1,51 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\Desktop\PSC\c-activity-sets\set04\problem02.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40140e: file problem02.c, line 14.
+(gdb) r
+Starting program: C:\Users\hp\Desktop\PSC\c-activity-sets\set04/./problem02.exe 
+[New Thread 15136.0x1a84]
+[New Thread 15136.0x46dc]
+
+Breakpoint 1, main () at problem02.c:14
+14          printf("Enter three fractions (numerator denominator):\n");
+(gdb) n
+Enter three fractions (numerator denominator):
+15          for (int i = 0; i < 3; ++i) {
+(gdb) n
+16              scanf("%d %d", &fractions[i].num, &fractions[i].den);
+(gdb)
+n
+15          for (int i = 0; i < 3; ++i) {
+(gdb) n
+16              scanf("%d %d", &fractions[i].num, &fractions[i].den);
+(gdb) n
+15          for (int i = 0; i < 3; ++i) {
+(gdb) n
+16              scanf("%d %d", &fractions[i].num, &fractions[i].den);
+(gdb) n
+15          for (int i = 0; i < 3; ++i) {
+(gdb) n
+19          Fraction smallest = find_smallest(fractions, 3);
+(gdb) n
+21          printf("The smallest fraction is: %d/%d\n", smallest.num, smallest.den);
+(gdb) n
+The smallest fraction is: 4199760/6356864
+23          return 0;
+(gdb) n
+24      }
+(gdb) n
+0x004010fd in __mingw_CRTStartup ()
+(gdb) n
+Single stepping until exit from function __mingw_CRTStartup,
+which has no line number information.
+[Inferior 1 (process 15136) exited normally]
+(gdb) q
