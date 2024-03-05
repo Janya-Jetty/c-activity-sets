@@ -7,7 +7,7 @@
     printf("enter the first string :");
     scanf("%s",string1);
     printf("enter the second string :");
-    
+    scanf("%s",string2);
  }
 
  int stringcompare(char *string1, char *string2)
